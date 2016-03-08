@@ -1,0 +1,6 @@
+<launch>
+    <param name="robot_description"
+           command="$(find xacro)/xacro $(find ros_adapter)/urdf/moonbuggy.urdf.xacro"/>
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="rob_st_pub" />
+</launch>
