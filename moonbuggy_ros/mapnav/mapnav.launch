@@ -1,4 +1,4 @@
 <launch>
     <include file="$(find moonbuggy)/mapnav/kinect.launch"/>
-    <include file="$(find moonbuggy)/control/slam.launch"/>
+    <include file="$(find moonbuggy)/mapnav/slam.launch"/>
 </launch>
