@@ -1,4 +1,4 @@
 <launch>
-    <include file="$(find ros_adapter)/urdf/state_pub.launch"/>
-    <include file="$(find ros_adapter)/control/control.launch"/>
+    <include file="$(find moonbuggy)/urdf/state_pub.launch"/>
+    <include file="$(find moonbuggy)/control/control.launch"/>
 </launch>

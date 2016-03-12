@@ -1,11 +1,11 @@
 <launch>
-    <rosparam command="load" file="$(find ros_adapter)/control/control.yaml" />
+    <rosparam command="load" file="$(find moonbuggy)/control/control.yaml" />
 
-    <node name="hw_joint" pkg="ros_adapter" type="motor_drive" args="/dev/ttyUSB0"/>
+    <node name="hw_joint" pkg="moonbuggy" type="motor_drive" args="/dev/ttyUSB0"/>
 
     <node name="controller_spawner" pkg="controller_manager" type="spawner"
           args="moonbuggy_joint_publisher moonbuggy_velocity_controller --shutdown-timeout 1" />
 
     <node pkg="topic_tools" type="relay" name="cmd_vel_relay"
-          args="cmd_vel jackal_velocity_controller/cmd_vel" />
+          args="cmd_vel moonbuggy_velocity_controller/cmd_vel" />
 </launch>
