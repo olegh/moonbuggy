@@ -1,4 +1,5 @@
 <launch>
     <include file="$(find moonbuggy)/urdf/state_pub.launch"/>
     <include file="$(find moonbuggy)/control/control.launch"/>
+    <include file="$(find moonbuggy)/mapnav/mapnav.launch"/>
 </launch>
