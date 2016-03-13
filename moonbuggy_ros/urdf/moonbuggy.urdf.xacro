@@ -169,13 +169,6 @@
     <origin xyz="${mount_spacing} 0 0" />
   </joint>
 
-  <link name="odom"></link>
-  <joint name="odom_joint" type="fixed">
-    <parent link="mid_mount"/>
-    <child link="odom"/>
-    <origin xyz="0 0 0"/>
-  </joint>
-
   <link name="base_laser_link"></link>
   <joint name="base_laser_link_joint" type="fixed">
     <parent link="mid_mount"/>
