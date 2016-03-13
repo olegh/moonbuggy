@@ -7,5 +7,7 @@
           args="moonbuggy_joint_publisher moonbuggy_velocity_controller --shutdown-timeout 1" />
 
     <node pkg="topic_tools" type="relay" name="cmd_vel_relay"
-          args="cmd_vel moonbuggy_velocity_controller/cmd_vel" />
+          args="cmd_vel moonbuggy_velocity_controller/cmd_vel" >
+        <!--<remap from="/moonbuggy_velocity_controller/odom" to="/odom"/>-->
+    </node>
 </launch>
