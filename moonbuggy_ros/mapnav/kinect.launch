@@ -11,6 +11,15 @@
         <param name="range_max" type="double" value="4"/>
     </node>
 
+    <!-- Odometry -->
+    <node pkg="rtabmap_ros" type="rgbd_odometry" name="rgbd_odometry" output="screen">
+        <remap from="rgb/image"       to="/camera/rgb/image_rect_color"/>
+        <remap from="depth/image"     to="/camera/depth_registered/image_raw"/>
+        <remap from="rgb/camera_info" to="/camera/depth_registered/camera_info"/>
+
+        <param name="frame_id" type="string" value="base_link"/>
+    </node>
+
     <!--<arg name="rate"  default="5"/>-->
     <!--<arg name="decimation"  default="1"/>-->
 
