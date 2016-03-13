@@ -3,7 +3,7 @@
     <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan">
         <remap from="image" to="/camera/depth_registered/image_raw"/>
         <remap from="camera_info" to="/camera/depth_registered/camera_info"/>
-        <remap from="scan" to="/kinect_scan"/>
+        <!--<remap from="scan" to="/kinect_scan"/>-->
         <param name="range_max" type="double" value="4"/>
     </node>
 
@@ -23,7 +23,7 @@
             <param name="subscribe_laserScan" type="bool" value="true"/>
 
             <remap from="odom" to="/base_controller/odom"/>
-            <remap from="scan" to="/kinect_scan"/>
+            <!--<remap from="scan" to="/kinect_scan"/>-->
 
             <remap from="rgb/image" to="/camera/rgb/image_rect_color"/>
             <remap from="depth/image" to="/camera/depth_registered/image_raw"/>
